@@ -1,0 +1,37 @@
+# import Entry from './generated/prisma.graphql'
+# import Review from "./generated/prisma.graphql"
+
+type Query {
+    listAll: [Entry!]!
+    feed(filter: String): [Entry!]!
+    findentry(filter: String): [Entry!]!
+    findentrybyuser(filter: String): [Entry!]!
+    finduser(filter: String): User!
+    loadreviews(filter: String): [Review]
+}
+
+type Mutation {
+    post(title: String!, description: String!, produce: String!, rating: Float!, no_reviews: Int!, price_lei: Int!, price_bani: Int!, per: String!): Entry!
+    signup(email: String!, password: String!, name: String!, rating: Float!, no_reviews: Int!): AuthPayload
+    login(email: String!, password: String!): AuthPayload
+    edituser(telephone: String, address: String, other: String): User!
+    comment(entryId: ID!, content: String!, no_reviews: Int!, opinion: Float!): Review!
+    vote(reviewId: ID!, opinion: Int!): Vote
+}
+
+type AuthPayload {
+    token: String
+    user: User
+}
+
+type User {
+  id: ID!
+  name: String!
+  email: String!
+  rating: Float!
+  no_reviews: Int!
+  entries: [Entry!]!
+  telephone: String
+  address: String
+  other: String
+}

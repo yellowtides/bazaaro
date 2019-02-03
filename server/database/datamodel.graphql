@@ -1,0 +1,44 @@
+type Entry {
+  id: ID! @unique
+  createdAt: DateTime!
+  description: String!
+  title: String!
+  produce: String!
+  postedBy: User!
+  rating: Float!
+  no_reviews: Int!
+  reviews: [Review!]!
+  price_lei: Int!
+  price_bani: Int!
+  per: String!
+}
+
+type User {
+  id: ID! @unique
+  name: String!
+  email: String! @unique
+  password: String!
+  entries: [Entry!]!
+  rating: Float!
+  no_reviews: Int!
+  telephone: String
+  address: String
+  other: String
+}
+
+type Review {
+  id: ID! @unique
+  createdAt: DateTime!
+  content: String!
+  postedBy: User!
+  postedOn: Entry!
+  no_reviews: Int!
+  opinion: Float!
+}
+
+type Vote {
+  id: ID! @unique
+  postedBy: User!
+  postedOn: Review!
+  opinion: Int!
+}

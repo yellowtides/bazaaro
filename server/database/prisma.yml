@@ -1,0 +1,3 @@
+endpoint: https://eu1.prisma.sh/dan-alexandru-dicu-80a227/bazaarodb/dev
+datamodel: datamodel.graphql
+secret: babc6b223194
