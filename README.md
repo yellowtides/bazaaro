@@ -3,6 +3,6 @@
 2. navigate to the root folder, run in another terminal with <code>npm start</code>
 <br/><br/>
 <h1>Description</h1><br/>
-<b>Note:</b> Bazaaro is a personal project whose main purpose is to help me understand the principles of modern database & interface web design. It is <i> only </i> a prototype, not meant to be published as a national online produce marketplace (as of now).
+<b>Note:</b> Bazaaro was a personal project whose main purpose was to aid the creator in understanding the principles of modern database & interface web design. It is <i> only </i> a prototype, not meant to be published as a bona fide online produce marketplace.
 <br/><br/>
-<h4> created using an reactjs/nodejs/graphql/apollo bootstrapper + database maintanance via prisma </h4>
+<h4> created using an reactjs-nodejs-graphql-apollo bootstrapper w/ database maintanance via prisma </h4>
